@@ -33,5 +33,8 @@ require 'lazy'.setup({
 		dependencies = {
 			{'nvim-lua/plenary.nvim'},
 		}
-	}
+	},
+
+	-- git
+	'tpope/vim-fugitive',
 })
