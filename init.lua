@@ -1,5 +1,6 @@
-print("hello")
 require("whiteowl")
+
+vim.opt.termguicolors = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,6 +22,12 @@ require 'lazy'.setup({
 		name = 'rose-pine',
 		priority = 100,
 	},
+	{
+		'norcalli/nvim-colorizer.lua',
+		init = function()
+			vim.cmd([[lua require('colorizer').setup()]])
+		end,
+	},
 
 	-- treesitter
 	'nvim-treesitter/nvim-treesitter',
@@ -37,4 +44,18 @@ require 'lazy'.setup({
 
 	-- git
 	'tpope/vim-fugitive',
+
+	-- lsp
+	'neovim/nvim-lspconfig',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
+	{
+		'L3MON4D3/LuaSnip',
+		-- follow latest release.
+		version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = 'make install_jsregexp'
+	},
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
 })
