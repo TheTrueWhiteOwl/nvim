@@ -44,10 +44,24 @@ require('mason-lspconfig').setup({
 		'html',
 		'cssls',
 	},
+
 	handlers = {
 		default_setup,
+		lua_ls = function()
+			require('lspconfig').lua_ls.setup({
+				capabilities = lsp_capabilities,
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { 'vim' }
+						}
+					}
+				}
+			})
+		end,
 	},
 })
+
 
 local cmp = require('cmp')
 
