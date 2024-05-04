@@ -9,14 +9,13 @@ vim.opt.relativenumber = true;
 
 vim.opt.termguicolors = true;
 
+-- vim.opt.list = true;
+-- vim.opt.listchars = 'eol:␤,tab:␉ ,trail:␠,nbsp:⍽,extends:…,precedes:…';
 
 -- text wrapping
 vim.opt.wrap = false;
 vim.opt.textwidth = 100;
-vim.opt.colorcolumn = {
-   '80',
-   '100',
-};
+vim.opt.colorcolumn = {};
 
 
 -- indentation

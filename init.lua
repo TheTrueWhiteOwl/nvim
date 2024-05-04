@@ -1,4 +1,4 @@
-require("whiteowl")
+require('whiteowl')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -20,12 +20,7 @@ require('lazy').setup({
       name = 'rose-pine',
       priority = 100,
    },
-   {
-      'norcalli/nvim-colorizer.lua',
-      init = function()
-         vim.cmd([[lua require('colorizer').setup()]])
-      end,
-   },
+   'brenoprata10/nvim-highlight-colors',
 
    -- treesitter
    'nvim-treesitter/nvim-treesitter',
