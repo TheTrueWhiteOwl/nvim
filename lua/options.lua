@@ -7,8 +7,8 @@ vim.opt.cursorline = true;
 vim.opt.scrolloff = 5;
 
 -- window splitting
-vim.opt.splitright = true;
-vim.opt.splitbelow = true;
+vim.opt.splitright = false;
+vim.opt.splitbelow = false;
 
 -- visuals
 vim.opt.number = true;
@@ -45,7 +45,7 @@ vim.opt.backup = false;
 
 vim.opt.updatetime = 250;
 
-vim.opt.undodir = os.getenv('LOCALAPPDATA') .. '/nvim-data/undodir'
+vim.opt.undodir = vim.fn.stdpath("data") .. '/undodir'
 vim.opt.undofile = true;
 
 -- searching
@@ -54,20 +54,3 @@ vim.opt.smartcase = true; -- case sensitive when search term contains Capital le
 vim.opt.hlsearch = true;
 vim.opt.incsearch = true;
 
--- look into spell checking for txt and html files
-
-
--- keybinds
-vim.opt.timeout = true;
-vim.opt.timeoutlen = 200;
-
-vim.opt.ttimeout = false;
-
--- autocommands
-vim.api.nvim_create_autocmd('TextYankPost', {
-   desc = 'Highlight when yanking (copying) text',
-   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-   callback = function()
-      vim.highlight.on_yank()
-   end,
-})
