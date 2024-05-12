@@ -1,4 +1,4 @@
-function prequire(...)
+local function prequire(...)
     local status, lib = pcall(require, ...)
     if (status) then return lib end
     --Library failed to load, so return `nil`
@@ -21,15 +21,6 @@ require('lazy').setup({
    -- undotree
    'mbbill/undotree',
 
-   -- telescope
-   {
-      'nvim-telescope/telescope.nvim', tag = '0.1.5',
-      -- or                          , branch = '0.1.x',
-      dependencies = {
-         {'nvim-lua/plenary.nvim'},
-      }
-   },
-
    -- git
    'tpope/vim-fugitive',
 
@@ -43,6 +34,7 @@ require('lazy').setup({
    },
    'hrsh7th/nvim-cmp',
    'hrsh7th/cmp-nvim-lsp',
+   prequire 'whiteowl.plugins.telescope',
    prequire 'whiteowl.plugins.indent_line',
    prequire 'whiteowl.plugins.lint',
 })
