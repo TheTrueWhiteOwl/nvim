@@ -1,10 +1,3 @@
-local function prequire(...)
-    local status, lib = pcall(require, ...)
-    if (status) then return lib end
-    --Library failed to load, so return `nil`
-    return nil
-end
-
 require('lazy').setup({
    -- color scheme
    {
@@ -34,7 +27,6 @@ require('lazy').setup({
    },
    'hrsh7th/nvim-cmp',
    'hrsh7th/cmp-nvim-lsp',
-   prequire 'whiteowl.plugins.telescope',
-   prequire 'whiteowl.plugins.indent_line',
-   prequire 'whiteowl.plugins.lint',
+   require 'plugins.telescope',
+   require 'plugins.indent_line',
 })

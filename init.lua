@@ -1,9 +1,5 @@
-require 'options'
-require 'autocommands'
+require 'config'
 require 'lazy_bootstrap'
 require 'lazy_plugins'
-require 'keymaps'
 
-vim.cmd('filetype plugin on');
-
-
+vim.cmd 'filetype plugin on'
