@@ -1,6 +1,7 @@
 return {
    {
       "nvim-treesitter/nvim-treesitter",
+      version = "^0.9.2",
 
       lazy = false,
 
@@ -27,6 +28,7 @@ return {
 
    {
       "HiPhish/rainbow-delimiters.nvim",
+      version = "^0.4.0",
       require = "nvim-treesitter/nvim-treesitter",
 
       lazy = true,

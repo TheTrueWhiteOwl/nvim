@@ -1,6 +1,7 @@
 return {
    {
       "williamboman/mason.nvim",
+      version = "^1.10.0",
 
       lazy = true,
 
@@ -8,6 +9,7 @@ return {
    },
    {
       "williamboman/mason-lspconfig.nvim",
+      version = "^1.29.0",
       dependencies = {
          "neovim/nvim-lspconfig",
          "williamboman/mason.nvim",
@@ -55,6 +57,7 @@ return {
 
    {
       "hrsh7th/nvim-cmp",
+      versionn = "^0.1.0",
       dependencies = {
          "L3MON4D3/LuaSnip",
       },
