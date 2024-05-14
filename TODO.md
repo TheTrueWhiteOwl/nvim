@@ -1,5 +1,6 @@
 # Planned features
 
+- [x] Make lazy loading work correctly
 - [ ] Add mappings for UndoTree
 - [ ] Add trouble.nvim for navigating diagnostics
-- [ ] Look into the whole lsp thing closer
+- [ ] Keep checking until rainbow-delimiters starts working again

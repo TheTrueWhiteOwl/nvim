@@ -1,5 +1,5 @@
 vim.opt.timeout = true
-vim.opt.timeoutlen = 200
+vim.opt.timeoutlen = 1500
 
 vim.opt.ttimeout = false
 
@@ -46,3 +46,6 @@ cmp.mapping.preset.insert({
    -- Ctrl + space triggers completion menu
    ['<C-Space>'] = cmp.mapping.complete(),
 })
+
+-- UndoTree
+vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)

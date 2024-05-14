@@ -53,4 +53,3 @@ vim.opt.ignorecase = true;
 vim.opt.smartcase = true; -- case sensitive when search term contains Capital letters
 vim.opt.hlsearch = true;
 vim.opt.incsearch = true;
-

@@ -1,13 +1,21 @@
 return {
-   'neovim/nvim-lspconfig',
-
-
    {
       'williamboman/mason.nvim',
-      opts = {},
+
+      lazy = true,
+
+      config = true,
    },
    {
       'williamboman/mason-lspconfig.nvim',
+      dependencies = {
+         'neovim/nvim-lspconfig',
+         'williamboman/mason.nvim',
+         --'hrsh7th/cmp-nvim-lsp', Not using anymore until I actually notice a difference
+      },
+
+      lazy = false,
+
       opts = {
          ensure_installed = {
             'pyright',
@@ -16,28 +24,33 @@ return {
             'html',
             'cssls',
          },
-      },
-   },
+         handlers = {
+            function(server)
+               require 'lspconfig' [server].setup {
+                  --capabilities = require('cmp_nvim_lsp').default_capabilities(),
+               }
+            end,
 
-   handlers = {
-      default_setup,
-      lua_ls = function()
-         require('lspconfig').lua_ls.setup({
-            capabilities = lsp_capabilities,
-            settings = {
-               Lua = {
-                  diagnostics = {
-                     globals = { 'vim' }
+            lua_ls = function()
+               require 'lspconfig'.lua_ls.setup {
+                  settings = {
+                     Lua = {
+                        diagnostics = {
+                           globals = { 'vim' }
+                        }
+                     }
                   }
                }
-            }
-         })
-      end,
+            end,
+         },
+      },
    },
 
    {
       'L3MON4D3/LuaSnip',
       version = '^2.3.0',
+
+      lazy = true,
    },
 
    {
@@ -45,6 +58,10 @@ return {
       dependencies = {
          'L3MON4D3/LuaSnip',
       },
+
+      lazy = true,
+      event = 'LspAttach',
+
       opts = {
          sources = {
             {
@@ -53,10 +70,9 @@ return {
          },
          snippet = {
             expand = function(args)
-               require('luasnip').lsp_expand(args.body)
+               require 'luasnip'.lsp_expand(args.body)
             end,
          },
       },
    },
-   'hrsh7th/cmp-nvim-lsp',
 }

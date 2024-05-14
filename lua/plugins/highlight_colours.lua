@@ -1,19 +1,14 @@
 return {
-   {
-      'brenoprata10/nvim-highlight-colors',
-      cond = vim.opt.termguicolors,
-      ft = { 'css', 'html' },
+   'brenoprata10/nvim-highlight-colors',
 
-      opts = {
-         -- Render style
-         ---@usage 'background'|'foreground'|'virtual'
-         render = 'background',
+   cond = vim.opt.termguicolors,
+   lazy = true,
+   ft = { 'css', 'html' },
 
-         -- Highlight named colors, e.g. 'green'
-         enable_named_colors = true,
+   opts = {
+      render = 'background',
 
-         -- Highlight tailwind colors, e.g. 'bg-blue-500'
-         enable_tailwind = false,
-      },
+      enable_named_colors = true,
+      enable_tailwind = false,
    },
 }
