@@ -1,76 +1,76 @@
 return {
    {
-      'williamboman/mason.nvim',
+      "williamboman/mason.nvim",
 
       lazy = true,
 
       config = true,
    },
    {
-      'williamboman/mason-lspconfig.nvim',
+      "williamboman/mason-lspconfig.nvim",
       dependencies = {
-         'neovim/nvim-lspconfig',
-         'williamboman/mason.nvim',
-         --'hrsh7th/cmp-nvim-lsp', Not using anymore until I actually notice a difference
+         "neovim/nvim-lspconfig",
+         "williamboman/mason.nvim",
+         --"hrsh7th/cmp-nvim-lsp", Not using anymore until I actually notice a difference
       },
 
       lazy = false,
 
       opts = {
          ensure_installed = {
-            'pyright',
-            'rust_analyzer',
-            'lua_ls',
-            'html',
-            'cssls',
+            "pyright",
+            "rust_analyzer",
+            "lua_ls",
+            "html",
+            "cssls",
          },
          handlers = {
             function(server)
-               require 'lspconfig' [server].setup {
-                  --capabilities = require('cmp_nvim_lsp').default_capabilities(),
-               }
+               require("lspconfig")[server].setup({
+                  --capabilities = require("cmp_nvim_lsp").default_capabilities(),
+               })
             end,
 
             lua_ls = function()
-               require 'lspconfig'.lua_ls.setup {
+               require("lspconfig").lua_ls.setup({
                   settings = {
                      Lua = {
                         diagnostics = {
-                           globals = { 'vim' }
+                           globals = { "vim" }
                         }
                      }
                   }
-               }
+               })
             end,
          },
       },
    },
 
    {
-      'L3MON4D3/LuaSnip',
-      version = '^2.3.0',
+      "L3MON4D3/LuaSnip",
+      version = "^2.3.0",
 
       lazy = true,
    },
 
    {
-      'hrsh7th/nvim-cmp',
+      "hrsh7th/nvim-cmp",
       dependencies = {
-         'L3MON4D3/LuaSnip',
+         "L3MON4D3/LuaSnip",
       },
 
       lazy = true,
-      event = 'LspAttach',
+      event = "LspAttach",
 
       opts = {
          sources = {
             {
-               name = 'nvim_lsp'
+               name = "nvim_lsp"
             },
          },
          snippet = {
             expand = function(args)
-               require 'luasnip'.lsp_expand(args.body)
+               require("luasnip").lsp_expand(args.body)
             end,
          },
       },

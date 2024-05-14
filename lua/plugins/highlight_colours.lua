@@ -1,12 +1,12 @@
 return {
-   'brenoprata10/nvim-highlight-colors',
+   "brenoprata10/nvim-highlight-colors",
 
    cond = vim.opt.termguicolors,
    lazy = true,
-   ft = { 'css', 'html' },
+   ft = { "css", "html" },
 
    opts = {
-      render = 'background',
+      render = "background",
 
       enable_named_colors = true,
       enable_tailwind = false,

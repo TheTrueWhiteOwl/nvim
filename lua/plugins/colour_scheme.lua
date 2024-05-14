@@ -1,6 +1,6 @@
 return {
-   'rose-pine/neovim',
-   name = 'rose-pine',
+   "rose-pine/neovim",
+   name = "rose-pine",
 
    lazy = false,
    priority = 100,
@@ -27,7 +27,7 @@ return {
       },
    },
    config = function()
-      vim.g.colors_name = 'rose-pine'
-      vim.opt.background = 'dark'
+      vim.g.colors_name = "rose-pine"
+      vim.opt.background = "dark"
    end,
 }

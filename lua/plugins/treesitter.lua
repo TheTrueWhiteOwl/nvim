@@ -1,11 +1,11 @@
 return {
    {
-      'nvim-treesitter/nvim-treesitter',
+      "nvim-treesitter/nvim-treesitter",
 
       lazy = false,
 
       opts = {
-         ensure_installed = { 'c', 'cpp', 'rust', 'lua', 'python', 'html', 'css', 'c_sharp', 'vimdoc' },
+         ensure_installed = { "c", "cpp", "rust", "lua", "python", "html", "css", "c_sharp", "vimdoc" },
 
          -- Install parsers synchronously (only applied to `ensure_installed`)
          sync_install = false,
@@ -21,28 +21,28 @@ return {
          },
       },
       config = function()
-         vim.cmd(':TSUpdate')
+         vim.cmd(":TSUpdate")
       end,
    },
 
    {
-      'HiPhish/rainbow-delimiters.nvim',
-      require = 'nvim-treesitter/nvim-treesitter',
+      "HiPhish/rainbow-delimiters.nvim",
+      require = "nvim-treesitter/nvim-treesitter",
 
       lazy = true,
-      event = 'BufRead',
+      event = "BufRead",
 
-      main = 'rainbow-delimiters.setup',
+      main = "rainbow-delimiters.setup",
       opts = {
          query = {
-            [''] = 'rainbow-delimiters',
-            lua = 'rainbow-blocks',
-            query = 'rainbow-blocks',
+            [""] = "rainbow-delimiters",
+            lua = "rainbow-blocks",
+            query = "rainbow-blocks",
          },
          highlight = {
-            'RainbowDelimiterViolet',
-            'RainbowDelimiterYellow',
-            'RainbowDelimiterBlue',
+            "RainbowDelimiterViolet",
+            "RainbowDelimiterYellow",
+            "RainbowDelimiterBlue",
          },
       },
    },
