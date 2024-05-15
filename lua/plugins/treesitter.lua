@@ -26,26 +26,4 @@ return {
       end,
    },
 
-   {
-      "HiPhish/rainbow-delimiters.nvim",
-      version = "^0.4.0",
-      require = "nvim-treesitter/nvim-treesitter",
-
-      lazy = true,
-      event = "BufRead",
-
-      main = "rainbow-delimiters.setup",
-      opts = {
-         query = {
-            [""] = "rainbow-delimiters",
-            lua = "rainbow-blocks",
-            query = "rainbow-blocks",
-         },
-         highlight = {
-            "RainbowDelimiterViolet",
-            "RainbowDelimiterYellow",
-            "RainbowDelimiterBlue",
-         },
-      },
-   },
 }

@@ -19,6 +19,7 @@ return {
       },
 
       highlight_groups = {
+         -- Rainbow Delimiters
          RainbowDelimiterViolet = { fg = "iris" },
          RainbowDelimiterYellow = { fg = "gold" },
          RainbowDelimiterBlue = { fg = "foam" },
