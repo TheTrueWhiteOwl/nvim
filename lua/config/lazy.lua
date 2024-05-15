@@ -9,6 +9,37 @@ require("lazy").setup({
    spec = {
       import = "plugins"
    },
+   ui = {
+      border = "rounded",
+      title = "Manage Plugins",
+      width = 0.8,
+      height = 0.9,
+
+      icons = {
+         cmd = "",
+         config = "",
+         event = "",
+         ft = "",
+         init = "",
+         import = "",
+         keys = "",
+         lazy = "󰒲 ",
+         loaded = "●",
+         not_loaded = "○",
+         plugin = "",
+         runtime = "",
+         require = "󰢱",
+         source = "",
+         start = "",
+         task = "✓",
+         list = {
+            "●",
+            "󱦰",
+            "󰓎",
+            "‒",
+         },
+      },
+   },
    checker = {
       enabled = true,
    },

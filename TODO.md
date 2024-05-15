@@ -1,7 +1,7 @@
 # Planned features
 
 - [x] Make lazy loading work correctly
-- [ ] Add rounded borders to a lot of plugins
+- [x] Add rounded borders to a lot of plugins
 - [ ] Add mappings for UndoTree
 - [ ] Add trouble.nvim for navigating diagnostics
 - [ ] Add keymap for swapping lines

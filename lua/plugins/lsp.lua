@@ -5,7 +5,19 @@ return {
 
       lazy = true,
 
-      config = true,
+      opts = {
+         ui = {
+            border = "rounded",
+            width = 0.8,
+            height = 0.9,
+
+            icons = {
+               package_installed = "●",
+               package_pending = "󰦗",
+               package_uninstalled = "○"
+            }
+         },
+      },
    },
    {
       "williamboman/mason-lspconfig.nvim",
