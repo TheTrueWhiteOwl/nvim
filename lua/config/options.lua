@@ -31,24 +31,22 @@ vim.opt.listchars = {
    eol = "␤",
    tab = "␉ ",
    trail = "␠",
-   nbsp = "⍽",
-   extends = "…",
-   precedes = "…",
-}
+ }
 --]]
+
 
 -- text wrapping
 vim.opt.wrap = true
-vim.opt.textwidth = 100
 vim.opt.linebreak = true
 vim.opt.breakindent = true
---[[ Hopefully neovim fixes this someday
+--[[ TODO: Hopefully neovim fixes this someday
 vim.opt.breakindentopt:append({
    min = 30,
    shift = 8,
 })
 --]]
 vim.opt.breakindentopt = "min:30,shift:8"
+vim.opt.showbreak = ""
 
 -- indentation
 vim.opt.tabstop = 8        -- width of tab characters (do not change)
