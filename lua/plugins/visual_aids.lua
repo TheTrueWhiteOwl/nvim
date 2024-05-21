@@ -4,7 +4,8 @@ return({
       version = "^3.5.4",
       dependencies = {
          "nvim-treesitter/nvim-treesitter",
-         "HiPhish/rainbow-delimiters.nvim", -- to ensure I can use its highlight groups for highlighting
+         -- ensures I can use its highlight groups for highlighting
+         "HiPhish/rainbow-delimiters.nvim",
       },
 
       lazy = true,
@@ -21,6 +22,7 @@ return({
             -- Requires treesitter
             scope = {
                show_start = true,
+               -- TODO: use custom hl groups
                highlight = {
                   "RainbowDelimiterViolet",
                   "RainbowDelimiterYellow",
@@ -49,6 +51,7 @@ return({
             lua = "rainbow-blocks",
             query = "rainbow-blocks",
          },
+         -- TODO: use custom hl groups
          highlight = {
             "RainbowDelimiterViolet",
             "RainbowDelimiterYellow",
