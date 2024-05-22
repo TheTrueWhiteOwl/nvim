@@ -6,6 +6,10 @@ vim.opt.guicursor = ""
 vim.opt.cursorline = true
 vim.opt.scrolloff = 5
 
+-- folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldnestmax = 10
+
 -- window splitting
 vim.opt.splitright = false
 vim.opt.splitbelow = false
