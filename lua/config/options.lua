@@ -39,13 +39,13 @@ vim.opt.listchars = {
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
---[[ TODO: Hopefully neovim fixes this someday
+--[[ NOTE: Hopefully neovim fixes this someday
 vim.opt.breakindentopt:append({
-   min = 30,
+   min = 40,
    shift = 8,
 })
 --]]
-vim.opt.breakindentopt = "min:30,shift:8"
+vim.opt.breakindentopt = "min:40,shift:8"
 vim.opt.showbreak = ""
 
 -- indentation
