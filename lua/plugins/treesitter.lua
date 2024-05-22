@@ -6,7 +6,7 @@ return {
       lazy = false,
 
       opts = {
-         ensure_installed = { "c", "cpp", "rust", "lua", "python", "html", "css", "json", "c_sharp", "vimdoc" },
+         ensure_installed = { "c", "cpp", "rust", "lua", "python", "html", "css", "json", "markdown", "markdown_inline", "c_sharp", "vimdoc" },
 
          -- Install parsers synchronously (only applied to `ensure_installed`)
          sync_install = false,
