@@ -9,6 +9,7 @@ vim.opt.scrolloff = 5
 -- folding
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldenable = false
 vim.o.foldnestmax = 10
 
 -- window splitting
