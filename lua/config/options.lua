@@ -7,8 +7,9 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 5
 
 -- folding
-vim.opt.foldmethod = "indent"
-vim.opt.foldnestmax = 10
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.o.foldnestmax = 10
 
 -- window splitting
 vim.opt.splitright = false
