@@ -18,9 +18,7 @@ vim.api.nvim_create_autocmd(
       group = vim.api.nvim_create_augroup("NvimTreesitter", { clear = false }),
       callback = function()
          -- if this fails then it means no parser is available for current buffer
-         if pcall(vim.treesitter.start) then
-            vim.treesitter.start()
-         end
+         pcall(vim.treesitter.start)
       end,
    }
 )

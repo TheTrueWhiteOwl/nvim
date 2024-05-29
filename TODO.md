@@ -11,3 +11,4 @@
 - [ ] Look into snippets engine or custom snippets
 - [ ] Add TS for markdown?
 - [x] Find temporary fix for realtime rainbow delimiters highlighting for now
+- [ ] Make folds default close, but ensure it works for example in telescope
